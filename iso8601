@@ -1,0 +1,19 @@
+data DT1;
+   format DT yymmdd10. H M S 8. DTM e8601dt19.;
+
+   * 日付値 ;
+   DT  = input("2023-11-11", yymmdd10.);
+   DT2 = '20MAY2015'd;
+   DT3 = put(DT2,date9.);
+   * 時 ;
+   H   = 20;
+
+   * 分 ;
+   M   = 10;
+
+   * 秒 ;
+   S   = 00;
+
+   * 日時値を作成 ;
+   DTM = dhms(DT2, H, M,S);
+run;
